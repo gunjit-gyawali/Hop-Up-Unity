@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class platform : MonoBehaviour
 {
-    public float jumpForce = 5f;
+    public float jumpForce = 3f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

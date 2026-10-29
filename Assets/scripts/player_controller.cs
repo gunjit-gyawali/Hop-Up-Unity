@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class player : MonoBehaviour
 {
-    private float speed = 10f;
+    private float speed = 5f;
     private float inputDirection;
     void Start()
     {

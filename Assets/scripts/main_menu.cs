@@ -1,17 +1,11 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class main_menu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    const int World = 1;
+    public void PlayGame()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        SceneManager.LoadSceneAsync(World);
     }
 }
