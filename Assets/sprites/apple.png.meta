@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1e73447716ad224e8b05124853990c64
+guid: 93751c94aaa472377965c58d0b77cac6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5039229560984662601
-    second: shield_power_up_0
+      213: -7832214784768987486
+    second: apple_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shield_power_up_0
+      name: apple_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 34
-        height: 34
+        x: 9
+        y: 2
+        width: 110
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7bd8cdbc96f011ab0800000000000000
-      internalID: -5039229560984662601
+      spriteID: 2ae284d66226e4390800000000000000
+      internalID: -7832214784768987486
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      shield_power_up_0: -5039229560984662601
+      apple_0: -7832214784768987486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
