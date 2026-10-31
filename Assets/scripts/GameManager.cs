@@ -10,8 +10,18 @@ public class GameManager : MonoBehaviour
     public GameObject applePrefab; 
 
     public int platformcount = 300;
+
+    public AudioClip backgroundMusic;
+    public AudioSource audioSource;
     void Start()
     {
+        if (audioSource != null && backgroundMusic != null)
+        {
+            audioSource.clip = backgroundMusic;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        
         Vector3 spwanPosition = new Vector3();
         for (int i = 0; i < platformcount; i++)
         {
@@ -20,7 +30,7 @@ public class GameManager : MonoBehaviour
             Instantiate(platformPrefab, spwanPosition, Quaternion.identity);
         }
 
-        // apple spwan randomly on platforms and when player collides with apple, it will be destroyed apple will not spwan in every platform, it will spwan in random platforms
+        // apple spwan randomly above platforms and when player collides with apple, it will be destroyed apple will not spwan in every platform, it will spwan in random platforms
         for (int i = 0; i < platformcount; i++)
         {
             if (Random.Range(0, 10) < 3)
