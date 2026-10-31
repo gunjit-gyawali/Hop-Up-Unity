@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public static class GameData
+{
+    public static int score = 0;
+}
 public class GameManager : MonoBehaviour
 {
     public GameObject platformPrefab;
@@ -9,10 +13,14 @@ public class GameManager : MonoBehaviour
 
     public GameObject applePrefab; 
 
+    public TMPro.TextMeshProUGUI tMP_Text;
+
     public int platformcount = 300;
 
     public AudioClip backgroundMusic;
     public AudioSource audioSource;
+
+    
     void Start()
     {
         if (audioSource != null && backgroundMusic != null)
@@ -46,11 +54,32 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (playerPrefab.transform.position.y < cameraPrefab.transform.position.y - 5f)
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
-        }
+        PlayerDied();
     }
     
+    void PlayerDied()
+    {
+        if (playerPrefab.transform.position.y < Camera.main.transform.position.y - 5f)
+        {
+            UpdateHighScore();
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    public void UpdateHighScore()
+    {
+        if (PlayerPrefs.HasKey("HighScore"))
+        {
+            int highScore = PlayerPrefs.GetInt("HighScore");
+            if (GameData.score > highScore)
+            {
+                PlayerPrefs.SetInt("HighScore", GameData.score);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("HighScore", GameData.score);
+        }
+    }
 
 }
