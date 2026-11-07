@@ -1,6 +1,6 @@
 # Hop Up
 
- This game is inspired by the original Doodle Jump game recreated in unity by me. The core concept is the same as og game: you have to keep going up as high as possible, get your high score, and try to beat your high score in the next game.
+ This is a type of Doodle Jump game recreated by me in Unity. The concept is simple: as og game, we go up and up, and we try to beat our own high score. Well, this game has a horror theme; try not to be scared.
 
 ## How to Play
 
